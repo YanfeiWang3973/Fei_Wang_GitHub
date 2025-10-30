@@ -13,28 +13,6 @@ title: Fei Wang
   <a href="#contact">Contact</a>
 </div>
 
-<button id="theme-toggle" class="badge" style="margin-bottom:10px">🌓 Toggle theme</button>
-<script>
-  const root = document.documentElement;
-  const btn = document.getElementById('theme-toggle');
-  const get = () => localStorage.getItem('theme');
-  const set = v => localStorage.setItem('theme', v);
-
-  const apply = v => {
-    if (v === 'dark') root.style.colorScheme = 'dark';
-    else if (v === 'light') root.style.colorScheme = 'light';
-    else root.style.colorScheme = 'normal'; // follow system
-  };
-
-  apply(get());
-  btn.onclick = () => {
-    const cur = get();
-    const next = cur === 'dark' ? 'light' : 'dark';
-    set(next); apply(next);
-  };
-</script>
-
-
 <!-- HERO -->
 <section class="hero">
   <div>
